@@ -6,12 +6,12 @@ FROM nginx:latest
 
 # label ile de key value pair olarak bu imajla ilgili bilgileri giriyoruz. her iki talimat da imajın içindeki sistemle alakalı değil.
 # her ikisi de imajın metadatasında saklanıyor. imajla alakali bilgiler. 
-LABEL maintainer="Ozgur Ozturk @ozgurozturknet"
+LABEL maintainer="Crony Community - MD"
 LABEL version="1.0"
 LABEL name="hello-docker"
 
 # bir adet env variable tanımlıyoruz. Daha sonra bunu runtime'da değiştireceğiz
-ENV KULLANICI="Dunyali"
+ENV KULLANICI="M.D."
 
 # nginx debian-slim imajı baz alınarak oluşturulmuştur.
 # bu imajda geriye doğru uyumluluk sorunları var ve o nedenle update olmuyor. 
