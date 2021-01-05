@@ -27,8 +27,8 @@ RUN apt-get install curl -y
 # nginx web sayfalarını /usr/share/nginx/html folder'ında barındırıyor. O nedenle bu folder'a geçiyoruz
 WORKDIR /usr/share/nginx/html
 
-# web sitemizin açılış sayfası olan Hello_docker.html dosyasını buraya kopyalıyoruz.
-COPY Hello_docker.html /usr/share/nginx/html
+# web sitemizin acilisi icin gerekli olan dosyalari buraya kopyalıyoruz.
+COPY ./ /usr/share/nginx/html
 
 # sistemin düzgün çalıştığını ve nginx daemon'ının web sitesini publish etmekte bir sorun yaşamadığını test ediyoruz
 HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 CMD curl -f http://localhost/ || exit 1
